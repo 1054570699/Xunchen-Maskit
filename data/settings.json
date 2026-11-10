@@ -1,0 +1,107 @@
+{
+  "mode": "local",
+  "enabled": true,
+  "glossary": [
+    "演示企业甲",
+    "演示企业乙",
+    "内部测试项目"
+  ],
+  "templates": [
+    {
+      "name": "应收账龄(演示)",
+      "fields": [
+        {
+          "source": "期间",
+          "output": "期间",
+          "kind": "category",
+          "actions": {
+            "internal": "keep",
+            "agency": "keep",
+            "external": "group"
+          }
+        },
+        {
+          "source": "币种",
+          "output": "币种",
+          "kind": "category",
+          "actions": {
+            "internal": "keep",
+            "agency": "keep",
+            "external": "group"
+          }
+        },
+        {
+          "source": "账龄区间",
+          "output": "账龄区间",
+          "kind": "category",
+          "actions": {
+            "internal": "keep",
+            "agency": "keep",
+            "external": "group"
+          }
+        },
+        {
+          "source": "客户名称",
+          "output": "客户名称",
+          "kind": "text",
+          "actions": {
+            "internal": "keep",
+            "agency": "alias",
+            "external": "drop"
+          }
+        },
+        {
+          "source": "应收金额",
+          "output": "应收金额",
+          "kind": "number",
+          "actions": {
+            "internal": "keep",
+            "agency": "band",
+            "external": "share"
+          }
+        },
+        {
+          "source": "统一社会信用代码",
+          "output": "统一社会信用代码",
+          "kind": "text",
+          "actions": {
+            "internal": "drop",
+            "agency": "drop",
+            "external": "drop"
+          }
+        },
+        {
+          "source": "银行账号",
+          "output": "银行账号",
+          "kind": "text",
+          "actions": {
+            "internal": "drop",
+            "agency": "drop",
+            "external": "drop"
+          }
+        },
+        {
+          "source": "备注",
+          "output": "备注",
+          "kind": "text",
+          "actions": {
+            "internal": "drop",
+            "agency": "drop",
+            "external": "drop"
+          }
+        }
+      ],
+      "bounds": [
+        0,
+        100000,
+        500000
+      ],
+      "id": "aging",
+      "version": 1
+    }
+  ],
+  "ai": {
+    "url": "",
+    "model": ""
+  }
+}
